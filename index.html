@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shelly Millet</title>
+
+  <style>
+    * { box-sizing: border-box; }
+
+    :root {
+      --bg: #f6f2eb;
+      --surface: rgba(255,255,255,0.74);
+      --text: #1f2328;
+      --muted: #66707a;
+      --line: #ddd4c8;
+      --accent: #243b3b;
+      --soft: #efe8dd;
+      --shadow: 0 10px 30px rgba(31, 35, 40, 0.06);
+      --radius: 22px;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+      border-radius: 16px;
+    }
+
+    .container {
+      width: min(1100px, 90%);
+      margin: auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(246, 242, 235, 0.9);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+      padding: 1rem 0;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      margin-left: 1rem;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .hero {
+      padding: 4rem 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      margin-top: 2rem;
+    }
+
+    .lead {
+      font-size: 1.1rem;
+      color: #333;
+      max-width: 600px;
+    }
+
+    .section {
+      padding: 3rem 0;
+    }
+
+    .card {
+      background: white;
+      padding: 1.2rem;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      margin-bottom: 1rem;
+      box-shadow: var(--shadow);
+    }
+
+    .quote {
+      font-size: 1.6rem;
+      border-left: 4px solid var(--accent);
+      padding-left: 1rem;
+      margin-top: 1rem;
+    }
+
+    .socials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      margin-top: 1rem;
+    }
+
+    .social-link {
+      padding: 0.6rem 0.9rem;
+      border-radius: 999px;
+      background: var(--soft);
+      border: 1px solid var(--line);
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    footer {
+      padding: 2rem 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 800px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <strong>Shelly Millet</strong>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#worlds">Worlds</a>
+      <a href="#connect">Connect</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <p style="text-transform: uppercase; font-size: 0.75rem; color: #777;">Builder · Operator</p>
+    <h1>Shelly Millet</h1>
+    <p class="lead">
+      I build calm structure in complex places.
+    </p>
+    <p class="lead">
+      From commercial trucking to horse farms to corporate delivery systems,
+      I’ve learned how structure, flow, and identity shape everything.
+    </p>
+  </div>
+
+  <div class="container">
+    <img src="hero-photo.jpg" alt="Shelly outdoors" />
+    <p style="font-size: 0.9rem; color: #777; margin-top: 0.5rem;">
+      Builder. Operator.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="quote">
+      Every system tells a story.
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <div class="container">
+    <h2>About</h2>
+    <div class="card">
+      <p>
+        My life didn’t follow one path. I’ve worked in environments where systems weren’t optional — they were survival.
+      </p>
+      <p>
+        I don’t live in those exact roles anymore, but they shaped how I see the world.
+      </p>
+      <p>
+        Today, I bring that lived experience into how I build, lead, and think.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="work" class="section">
+  <div class="container">
+    <h2>Work</h2>
+
+    <div class="card">
+      <strong>Aligned work</strong>
+      <p>
+        I’m building toward work that is aligned with my life and grounded in real contribution —
+        leading through systems, clarity, and better ways of working so people and teams can perform at their highest potential.
+      </p>
+    </div>
+
+    <div class="card">
+      <strong>Builder mindset</strong>
+      <p>
+        Learning Git, coding, and technical workflows to deepen how I build and lead.
+      </p>
+    </div>
+
+    <div class="card">
+      <strong>Systems thinking</strong>
+      <p>
+        Designing how work actually flows — not just how it’s described.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section id="worlds" class="section">
+  <div class="container">
+    <h2>Worlds</h2>
+
+    <div class="card"><strong>Wishbone Collective</strong><p>Life systems and reinvention.</p></div>
+    <div class="card"><strong>4K9 Company</strong><p>Dogs, land, and movement.</p></div>
+    <div class="card"><strong>Follow Spot</strong><p>The framework behind how I capture and understand my life.</p></div>
+    <div class="card"><strong>Shaking My Angels</strong><p>Ancestral healing and my father’s story carried forward.</p></div>
+    <div class="card"><strong>We Met Through the Horses</strong><p>Photography, love, and healing.</p></div>
+    <div class="card"><strong>Stories</strong><p>The writing and reflections that bring it all together.</p></div>
+
+  </div>
+</section>
+
+<section id="connect" class="section">
+  <div class="container">
+    <h2>Connect</h2>
+
+    <div class="socials">
+      <a class="social-link" href="https://www.shellymillet.com/" target="_blank">Website</a>
+      <a class="social-link" href="https://shellymillet.substack.com/" target="_blank">Substack</a>
+      <a class="social-link" href="https://www.linkedin.com/in/shellymillet" target="_blank">LinkedIn</a>
+      <a class="social-link" href="https://x.com/ShellyBuilds" target="_blank">X</a>
+      <a class="social-link" href="https://www.instagram.com/4k9company/" target="_blank">Instagram</a>
+      <a class="social-link" href="https://www.facebook.com/shelly.millet" target="_blank">Facebook</a>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>© 2026 Shelly Millet</p>
+  </div>
+</footer>
+
+</body>
+</html>
