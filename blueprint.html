@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Blueprint | Shelly Millet</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #fdfbf7; --text: #2d2d2d; --slate: #1e293b; --border: #e2e8f0;
+            --life-sage: #708238; --life-bg: #f2f4ec; --work-amber: #D97706; --work-bg: #fff9eb;
+        }
+        body { background-color: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; line-height: 1.6; margin: 0; padding: 60px 20px; display: flex; justify-content: center; }
+        .container { max-width: 900px; width: 100% }
+        header { text-align: center; margin-bottom: 50px; }
+        h1 { font-family: 'Playfair Display', serif; color: var(--slate); font-size: 3rem; margin-bottom: 10px; }
+        header a { text-decoration: none; color: var(--slate); font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; }
+        .sovereign-logic { background: white; border: 2px solid var(--slate); padding: 40px; border-radius: 8px; margin-bottom: 40px; }
+        .lane-tabs { display: flex; justify-content: center; gap: 0; }
+        .lane-btn { padding: 16px 50px; border: 1px solid var(--border); background: #f1f5f9; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; cursor: pointer; border-bottom: none; transition: 0.3s; opacity: 0.6; }
+        .lane-btn[data-lane="life"].active { background: var(--life-bg); border-color: var(--life-sage); color: var(--life-sage); opacity: 1; border-radius: 8px 8px 0 0; border-top: 4px solid var(--life-sage); }
+        .lane-btn[data-lane="work"].active { background: var(--work-bg); border-color: var(--work-amber); color: var(--work-amber); opacity: 1; border-radius: 8px 8px 0 0; border-top: 4px solid var(--work-amber); }
+        .lane-container { padding: 40px; border-radius: 0 0 8px 8px; border: 1px solid var(--border); min-height: 480px; transition: all 0.3s ease; }
+        .lane-container.life-active { background-color: var(--life-bg); border-color: var(--life-sage); }
+        .lane-container.work-active { background-color: var(--work-bg); border-color: var(--work-amber); }
+        .lane-content { display: none; }
+        .lane-content.active { display: block; animation: fadeIn 0.4s ease; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .sub-system-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        .sub-system { padding: 30px; background: white; border-radius: 8px; border: 1px solid rgba(0,0,0,0.05); }
+        .life-active .sub-system h4 { color: var(--life-sage); border-bottom: 1px solid var(--life-sage); }
+        .life-active .sub-system ul { color: var(--life-sage); }
+        .work-active .sub-system h4 { color: var(--work-amber); border-bottom: 1px solid var(--work-amber); }
+        .work-active .sub-system ul { color: var(--work-amber); }
+        .sub-system h4 { font-family: 'Playfair Display', serif; font-size: 1.5rem; margin: 0 0 15px 0; padding-bottom: 10px; }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 12px; font-size: 0.95rem; }
+        .footer-quote { text-align: center; font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.6rem; color: var(--slate); margin-top: 60px; padding: 40px 0; border-top: 1px solid var(--border); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header><a href="index.html">← Return to Ground Zero</a><h1>The ALEW Blueprint</h1></header>
+        <section class="sovereign-logic">
+            <h2 style="font-family: 'Playfair Display', serif; color: var(--slate); margin-top: 0;">The Sovereign Parent Logic</h2>
+            <p>My father was a hidden child who survived through silence; my mission is to honor that survival by turning it into expression and intelligence. The Sovereign Operating System (S.O.S.) is the bridge where healing ancestral trauma meets the tactical demand for AI for Good.</p>
+        </section>
+        <div class="lane-tabs">
+            <button class="lane-btn active" data-lane="life" onclick="switchLane(event, 'life-lane')">Life Lane</button>
+            <button class="lane-btn" data-lane="work" onclick="switchLane(event, 'work-lane')">Work Lane</button>
+        </div>
+        <div id="lane-box" class="lane-container life-active">
+            <div id="life-lane" class="lane-content active">
+                <div class="sub-system-grid">
+                    <div class="sub-system">
+                        <h4>The Pack</h4><p>Leadership through partnership:</p>
+                        <ul><li><strong>Connection:</strong> Establish trust before the task.</li><li><strong>Observation:</strong> Seeing the signal in the system.</li><li><strong>The Leash:</strong> Structure for safety and freedom, never surrender.</li></ul>
+                    </div>
+                    <div class="sub-system"><h4>Ancestral Integration</h4><p>Healing the generational gap:</p><ul><li>Transforming silence into intelligence.</li><li>Mapping historical resilience.</li><li>Building a legacy for those who come next.</li></ul></div>
+                </div>
+            </div>
+            <div id="work-lane" class="lane-content">
+                <div class="sub-system-grid">
+                    <div class="sub-system">
+                        <h4>The Enterprise</h4><p>Staff Program Management:</p>
+                        <ul><li><strong>Actual Flow:</strong> Mapping reality vs. description.</li><li><strong>Dependency Drag:</strong> Removing friction.</li><li><strong>Normalizing the Data:</strong> Technical truth for human clarity.</li></ul>
+                    </div>
+                    <div class="sub-system">
+                        <h4>The Team</h4><p>Building sanctuaries for performance:</p>
+                        <ul><li><strong>Decision Paths:</strong> Reducing cognitive load.</li><li><strong>Zero-Drama Delivery:</strong> Normalizing obstacles.</li><li><strong>Identity Protection:</strong> Shielding human potential from Signal Dampening.</li></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-quote">"Every system tells a story. I make the invisible visible."</div>
+        <script>
+            function switchLane(evt, laneName) {
+                const contents = document.getElementsByClassName("lane-content");
+                const buttons = document.getElementsByClassName("lane-btn");
+                const laneBox = document.getElementById("lane-box");
+                for (let btn of buttons) { btn.classList.remove("active"); }
+                for (let content of contents) { content.classList.remove("active"); }
+                document.getElementById(laneName).classList.add("active");
+                evt.currentTarget.classList.add("active");
+                const laneType = evt.currentTarget.getAttribute("data-lane");
+                laneBox.className = (laneType === 'life') ? "lane-container life-active" : "lane-container work-active";
+            }
+        </script>
+    </div>
+</body>
+</html>
